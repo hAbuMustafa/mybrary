@@ -1,5 +1,10 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
-cosnt authorSchema = new mongoose.Schema({
-  
-})
+const authorSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
+module.exports = mongoose.model('Author', authorSchema);
